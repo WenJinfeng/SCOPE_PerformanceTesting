@@ -1,0 +1,11 @@
+{
+    "name": "auth",
+    "description": "Serverless auth",
+    "main": "index.js",
+    "dependencies": {
+      "gm": "latest",
+      "bluebird":"latest",
+      "imagemagick": "latest"
+    }
+    
+  }
