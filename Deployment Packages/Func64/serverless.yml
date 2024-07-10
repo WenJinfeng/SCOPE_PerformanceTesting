@@ -1,0 +1,28 @@
+service: Fun64fetch-file-and-store-in-s3
+
+frameworkVersion: ">=2.24.0"
+
+custom:
+  bucket: bucketwendycyn1
+
+provider:
+  name: aws
+  runtime: nodejs12.x
+  memorySize: 1024
+  timeout: 6
+  stage: dev
+  region: us-west-1
+  iam:
+    role:
+      statements:
+        - Effect: Allow
+          Action:
+            - s3:PutObject
+            - s3:PutObjectAcl
+          Resource: "arn:aws:s3:::${self:custom.bucket}/*"
+
+functions:
+  save:
+    handler: handler.save
+    environment:
+      BUCKET: ${self:custom.bucket}
