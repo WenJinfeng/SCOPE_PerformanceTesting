@@ -4,7 +4,7 @@
 
 - Data:
     - The details of serverless functions from an existing dataset (including 65 serverless functions):
-        - see the file "**Dataset_Serverless Functions.xlsx**", containing the function ID, function name, tested input, executed serverless platform, programming language, timeout time (second), memory size (MB), and code link.
+        - see the file "**Dataset_Serverless Functions_updated.xlsx**", containing the function ID, function name, tested input, executed serverless platform, programming language, timeout time (second), memory size (MB), code link, and **task type**.
     - The performance data of serverless functions:
         - see the file "**Performance_Data.xlsx**", containing 1,000 performance results of each serverless function that is repeatedly executed.
     - We provide the additional performance data of 500 runs to analyze trustworthy ground truth. Please see the file "**AdditionalPerformance_Data500.xlsx**"
