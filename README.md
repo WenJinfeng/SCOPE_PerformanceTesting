@@ -18,7 +18,9 @@
       - "**invokeAWSFunction-run1.py**" and **invokeAWSFunction-run2.py**" are the scripts that invoke serverless functions executed on AWS Lambda
       - "**invokeGoogleFunction.py**" is the script that invokes serverless functions executed on Google Cloud Functions
     - The implementation of state-of-the-art techniques: PT4Cloud and Metior
-        - see the file "**state-of-the-arts.py**" and use the methods "fse19method" and "ase21method". Moreover, **the evaluation of testing results is in the method - identifyEffectiveness.**
+        - see the file "**state-of-the-arts.py**" and use the methods "fse19method" and "ase21method".
+        - see the file "**CONFIRM.py**" and use the method "CONFIRM".
+        - **the evaluation of testing results is in the method - identifyEffectiveness.**
     -  The implementation of our approach SCOPE
         - see the file "**SCOPE.py**" and use the method "determineStopRun" with different variants: general, bootstrapping, and block bootstrapping. Moreover, **the evaluation of testing results is in the method - identifyEffectiveness.**
         
