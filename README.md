@@ -1,5 +1,13 @@
 # SCOPE: Performance Testing for Serverless Computing
 
+- New Data:
+    - We explore the effectiveness of SCOPE in other situations, including mixed cold and warm conditions, serverless applications composed of multiple functions, varying input conditions, functions with other types of triggers, highly bursty workloads, and functions executed across different platforms.
+    - Their tested performance data is saved in the file "**AddData.xlsx**".
+
+- New Code (The directory "AddExperiment"):
+    - We implement two serverless applications from AWS and Google, repectively. Please see the directory "AWSApplication" and "Google Application", which also includes invocation scripts.
+    - We implement three serverless functions with different triggers, incorporating Amazon S3, Amazon SQS, and Amazon DynamoDB, repectively. Please see the directory "S3InvokeFunction", "SQSInvokeFunction", and "DynamoDBInvokeFunction", which also include invocation scripts.
+    - We implement four serverless functions executed Microsoft Azure Functions and Alibaba Function Compute. Please see the directory "AzureFunctions" and "AliFunctions", which also includes invocation scripts.
 
 
 - Data:

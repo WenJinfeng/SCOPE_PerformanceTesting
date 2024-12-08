@@ -1,0 +1,37 @@
+- randomgen_function:
+    call: http.get
+    args:
+        url: https://us-west1-studentpro-442804.cloudfunctions.net/randomgen-function
+    result: randomgen_result
+- multiply_function:
+    call: http.post
+    args:
+        url: https://us-west1-studentpro-442804.cloudfunctions.net/multiply-function
+        body:
+            input: ${randomgen_result.body.random}
+    result: multiply_result
+- log_function:
+    call: http.get
+    args:
+        url: https://api.mathjs.org/v4/
+        query:
+            expr: ${"log(" + string(multiply_result.body.multiplied) + ")"}
+    result: log_result
+- floor_function:
+    call: http.post
+    args:
+        url: https://floor-968087467723.us-west1.run.app
+        auth:
+            type: OIDC
+        body:
+            input: ${log_result.body}
+    result: floor_result
+- create_output_map:
+    assign:
+      - outputMap:
+          randomResult: ${randomgen_result}
+          multiplyResult: ${multiply_result}
+          logResult: ${log_result}
+          floorResult: ${floor_result}
+- return_output:
+    return: ${outputMap}
