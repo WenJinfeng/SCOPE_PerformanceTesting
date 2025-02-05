@@ -1,5 +1,8 @@
 # SCOPE: Performance Testing for Serverless Computing
 
+This work has been accepted in ACM Transactions on Software Engineering and Methodology (TOSEM).
+
+
 - New Data:
     - We explore the effectiveness of SCOPE in other situations, including mixed cold and warm conditions, serverless applications composed of multiple functions, varying input conditions, functions with other types of triggers, highly bursty workloads, and functions executed across different platforms.
     - Their tested performance data is saved in the file "**AddData.xlsx**".
